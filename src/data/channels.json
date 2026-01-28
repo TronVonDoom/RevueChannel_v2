@@ -1,0 +1,1427 @@
+{
+  "channels": [
+    {
+      "number": 2,
+      "call": "CSPAN",
+      "network": "C-SPAN",
+      "category": "news",
+      "programs": [
+        {
+          "title": "Washington Journal",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Congressional Hearing",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Senate Floor Proceedings",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "call": "WWL",
+      "network": "CBS",
+      "category": "broadcast",
+      "programs": [
+        {
+          "title": "CBS Evening News",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "Wheel of Fortune",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "game",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "Jeopardy!",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "game",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "call": "PREVUE",
+      "network": "Prevue",
+      "category": "guide",
+      "programs": [
+        {
+          "title": "Channel Listings",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "guide"
+        },
+        {
+          "title": "Coming Up Next",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "guide"
+        },
+        {
+          "title": "Movie Reviews»",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "guide",
+          "special": "movie-reviews"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "call": "HBO",
+      "network": "HBO",
+      "category": "premium",
+      "programs": [
+        {
+          "title": "\"Goodfellas\" (1990)",
+          "startTime": "4:30 PM",
+          "duration": 150,
+          "category": "movie",
+          "year": 1990,
+          "flags": ["No Commercial Interruption", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "call": "GOVT",
+      "network": "Government",
+      "category": "public",
+      "programs": [
+        {
+          "title": "City Council Meeting",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "government",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Public Access",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "government"
+        },
+        {
+          "title": "Community Spotlight",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "government"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "call": "WDSU",
+      "network": "NBC",
+      "category": "broadcast",
+      "programs": [
+        {
+          "title": "NBC Programming",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "misc",
+          "flags": ["CC"]
+        },
+        {
+          "title": "NBC Nightly News",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "NBC Nightly News",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "call": "EDUCA",
+      "network": "Educational",
+      "category": "education",
+      "programs": [
+        {
+          "title": "Educational Programming",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "education",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Educational Programming",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "education",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Educational Programming",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "education",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "call": "WVUE",
+      "network": "FOX",
+      "category": "broadcast",
+      "programs": [
+        {
+          "title": "FOX Programming",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "misc",
+          "flags": ["CC"]
+        },
+        {
+          "title": "FOX Programming",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "misc",
+          "flags": ["CC"]
+        },
+        {
+          "title": "FOX Programming",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "misc",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "call": "COX",
+      "network": "Cox Metro",
+      "category": "local",
+      "programs": [
+        {
+          "title": "Cox Metro Programming",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "local"
+        },
+        {
+          "title": "Cox Metro Programming",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "local"
+        },
+        {
+          "title": "Cox Metro Programming",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "local"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "call": "WGNO",
+      "network": "ABC",
+      "category": "broadcast",
+      "programs": [
+        {
+          "title": "ABC Programming",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "misc",
+          "flags": ["CC"]
+        },
+        {
+          "title": "ABC World News",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "ABC World News",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "call": "WYES",
+      "network": "PBS",
+      "category": "public",
+      "programs": [
+        {
+          "title": "PBS NewsHour",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC"]
+        },
+        {
+          "title": "PBS NewsHour",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Nature",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "documentary",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "call": "WNOL",
+      "network": "WB",
+      "category": "broadcast",
+      "programs": [
+        {
+          "title": "The Wayans Bros.",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Sister, Sister",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC"]
+        },
+        {
+          "title": "The Steve Harvey Show",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "call": "WLAE",
+      "network": "Independent",
+      "category": "independent",
+      "programs": [
+        {
+          "title": "Star Trek: The Next Generation",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "scifi",
+          "flags": ["Stereo"]
+        },
+        {
+          "title": "Star Trek: Deep Space Nine",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "scifi",
+          "flags": ["Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "call": "LOCAL",
+      "network": "Local News",
+      "category": "news",
+      "programs": [
+        {
+          "title": "Local News at 4:30",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Local News at 5",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Local News at 5:30",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "call": "SHO",
+      "network": "Showtime",
+      "category": "premium",
+      "programs": [
+        {
+          "title": "\"Pulp Fiction\" (1994)",
+          "startTime": "4:30 PM",
+          "duration": 150,
+          "category": "movie",
+          "year": 1994,
+          "flags": ["No Commercial Interruption"]
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "call": "TBS",
+      "network": "TBS",
+      "category": "cable",
+      "programs": [
+        {
+          "title": "Friends",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "Seinfeld",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "The Fresh Prince of Bel-Air",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "call": "WGN",
+      "network": "WGN",
+      "category": "independent",
+      "programs": [
+        {
+          "title": "Matlock",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC"]
+        },
+        {
+          "title": "In the Heat of the Night",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "call": "LEARN",
+      "network": "Learning Channel",
+      "category": "education",
+      "programs": [
+        {
+          "title": "How It's Made",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "documentary",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Beyond 2000",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "documentary",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Paleoworld",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "documentary",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "call": "MAX",
+      "network": "Cinemax",
+      "category": "premium",
+      "programs": [
+        {
+          "title": "\"Speed\" (1994)",
+          "startTime": "4:30 PM",
+          "duration": 120,
+          "category": "movie",
+          "year": 1994,
+          "flags": ["No Commercial Interruption"]
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "call": "DIS",
+      "network": "Disney Channel",
+      "category": "family",
+      "programs": [
+        {
+          "title": "DuckTales",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "kids",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Chip 'n Dale: Rescue Rangers",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "kids",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Goof Troop",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "kids",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "call": "BET",
+      "network": "BET",
+      "category": "entertainment",
+      "programs": [
+        {
+          "title": "Video Soul",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "music",
+          "flags": ["Stereo"]
+        },
+        {
+          "title": "Rap City",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "music",
+          "flags": ["Stereo"]
+        },
+        {
+          "title": "BET News",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "call": "A&E",
+      "network": "A&E",
+      "category": "entertainment",
+      "programs": [
+        {
+          "title": "Biography",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "documentary",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Investigative Reports",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "documentary",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "call": "WEATHR",
+      "network": "Weather Channel",
+      "category": "news",
+      "programs": [
+        {
+          "title": "Weather Center",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "weather",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Local Forecast",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "weather",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Storm Stories",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "weather",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "call": "TNT",
+      "network": "TNT",
+      "category": "entertainment",
+      "programs": [
+        {
+          "title": "In the Heat of the Night",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "Matlock",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "call": "AMC",
+      "network": "AMC",
+      "category": "movies",
+      "programs": [
+        {
+          "title": "\"Casablanca\" (1942)",
+          "startTime": "4:30 PM",
+          "duration": 120,
+          "category": "movie",
+          "year": 1942,
+          "flags": ["Limited Commercial Interruption"]
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "call": "MTV",
+      "network": "MTV",
+      "category": "music",
+      "programs": [
+        {
+          "title": "Total Request Live",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "music",
+          "flags": ["LIVE", "Stereo"]
+        },
+        {
+          "title": "Beavis and Butt-head",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "call": "USA",
+      "network": "USA",
+      "category": "entertainment",
+      "programs": [
+        {
+          "title": "Murder, She Wrote",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "MacGyver",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "action",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "call": "CNN",
+      "network": "CNN",
+      "category": "news",
+      "programs": [
+        {
+          "title": "The World Today",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Crossfire",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "The World Today",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "call": "QVC",
+      "network": "QVC",
+      "category": "shopping",
+      "programs": [
+        {
+          "title": "Today's Special Value",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "shopping",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Jewelry Showcase",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "shopping",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Electronics Show",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "shopping",
+          "flags": ["LIVE"]
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "call": "NICK",
+      "network": "Nickelodeon",
+      "category": "kids",
+      "programs": [
+        {
+          "title": "Rugrats",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "kids",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Hey Arnold!",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "kids",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Doug",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "kids",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "call": "DISC",
+      "network": "Discovery",
+      "category": "documentary",
+      "programs": [
+        {
+          "title": "How It's Made",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "documentary",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Wild Discovery",
+          "startTime": "5:00 PM",
+          "duration": 60,
+          "category": "documentary",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "call": "HLN",
+      "network": "Headline News",
+      "category": "news",
+      "programs": [
+        {
+          "title": "Headline News",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Headline News",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Headline News",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "call": "LIFE",
+      "network": "Lifetime",
+      "category": "entertainment",
+      "programs": [
+        {
+          "title": "The Golden Girls",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Designing Women",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC"]
+        },
+        {
+          "title": "thirtysomething",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "call": "FAM",
+      "network": "Family Channel",
+      "category": "family",
+      "programs": [
+        {
+          "title": "The Waltons",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Little House on the Prairie",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "drama",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "call": "TNN",
+      "network": "Nashville Network",
+      "category": "country",
+      "programs": [
+        {
+          "title": "Dukes of Hazzard",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "action",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Nashville Now",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "music",
+          "flags": ["LIVE"]
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "call": "HBO2",
+      "network": "HBO 2",
+      "category": "premium",
+      "programs": [
+        {
+          "title": "\"The Shawshank Redemption\" (1994)",
+          "startTime": "4:30 PM",
+          "duration": 150,
+          "category": "movie",
+          "year": 1994,
+          "flags": ["No Commercial Interruption"]
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "call": "ESPN",
+      "network": "ESPN",
+      "category": "sports",
+      "programs": [
+        {
+          "title": "SportsCenter",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "sports",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Baseball Tonight",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "sports",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "SportsCenter",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "sports",
+          "flags": ["LIVE"]
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "call": "COMEDY",
+      "network": "Comedy Central",
+      "category": "comedy",
+      "programs": [
+        {
+          "title": "Mystery Science Theater 3000",
+          "startTime": "4:30 PM",
+          "duration": 90,
+          "category": "comedy",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Absolutely Fabulous",
+          "startTime": "6:00 PM",
+          "duration": 30,
+          "category": "comedy",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "call": "BRAVO",
+      "network": "Bravo",
+      "category": "arts",
+      "programs": [
+        {
+          "title": "Inside the Actors Studio",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "talk",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Mystery!",
+          "startTime": "5:30 PM",
+          "duration": 90,
+          "category": "drama",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "call": "VH1",
+      "network": "VH1",
+      "category": "music",
+      "programs": [
+        {
+          "title": "Pop Up Video",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "music",
+          "flags": ["Stereo"]
+        },
+        {
+          "title": "Behind the Music",
+          "startTime": "5:00 PM",
+          "duration": 60,
+          "category": "documentary",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "call": "HSN",
+      "network": "Home Shopping",
+      "category": "shopping",
+      "programs": [
+        {
+          "title": "Home & Garden Show",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "shopping",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Kitchen Collection",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "shopping",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "Fashion Finds",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "shopping",
+          "flags": ["LIVE"]
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "call": "CNBC",
+      "network": "CNBC",
+      "category": "news",
+      "programs": [
+        {
+          "title": "Street Signs",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "business",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Market Wrap",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "business",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Business Center",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "business",
+          "flags": ["LIVE", "CC"]
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "call": "E!",
+      "network": "E!",
+      "category": "entertainment",
+      "programs": [
+        {
+          "title": "Talk Soup",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "talk",
+          "flags": ["CC"]
+        },
+        {
+          "title": "E! News Daily",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "entertainment",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Wild On!",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "travel",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "call": "SCIFI",
+      "network": "Sci-Fi",
+      "category": "scifi",
+      "programs": [
+        {
+          "title": "Quantum Leap",
+          "startTime": "4:30 PM",
+          "duration": 60,
+          "category": "scifi",
+          "flags": ["CC", "Stereo"]
+        },
+        {
+          "title": "Sliders",
+          "startTime": "5:30 PM",
+          "duration": 60,
+          "category": "scifi",
+          "flags": ["CC", "Stereo"]
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "call": "EWTN",
+      "network": "EWTN/TBN",
+      "category": "religious",
+      "programs": [
+        {
+          "title": "Daily Mass",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "religious",
+          "flags": ["LIVE"]
+        },
+        {
+          "title": "The Rosary",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "religious"
+        },
+        {
+          "title": "EWTN News",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "call": "VISN",
+      "network": "VISN-ACTS",
+      "category": "religious",
+      "programs": [
+        {
+          "title": "Faith & Values",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "religious"
+        },
+        {
+          "title": "Interfaith Programming",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "religious"
+        },
+        {
+          "title": "World Religions",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "religious"
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "call": "CSPAN2",
+      "network": "C-SPAN 2",
+      "category": "news",
+      "programs": [
+        {
+          "title": "Book TV",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "educational",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Author Discussion",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "educational",
+          "flags": ["LIVE", "CC"]
+        },
+        {
+          "title": "Senate Proceedings",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["LIVE", "CC"]
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "call": "TRAVEL",
+      "network": "Travel Channel",
+      "category": "travel",
+      "programs": [
+        {
+          "title": "Lonely Planet",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "travel",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Great Hotels",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "travel",
+          "flags": ["CC"]
+        },
+        {
+          "title": "Travels in Europe",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "travel",
+          "flags": ["CC"]
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "call": "ACCESS",
+      "network": "Access",
+      "category": "local",
+      "programs": [
+        {
+          "title": "Local Access",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "local"
+        },
+        {
+          "title": "Community Events",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "local"
+        },
+        {
+          "title": "Public Forum",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "local"
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "call": "UNIV",
+      "network": "Univision",
+      "category": "spanish",
+      "programs": [
+        {
+          "title": "Noticiero Univision",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "news",
+          "flags": ["Spanish", "CC"]
+        },
+        {
+          "title": "Cristina",
+          "startTime": "5:00 PM",
+          "duration": 60,
+          "category": "talk",
+          "flags": ["Spanish"]
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "call": "PPV1",
+      "network": "PPV",
+      "category": "ppv",
+      "programs": [
+        {
+          "title": "Tyson vs. Holyfield III",
+          "startTime": "4:30 PM",
+          "duration": 180,
+          "category": "ppv",
+          "price": "$49.99",
+          "flags": ["LIVE", "PPV"]
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "call": "PPV2",
+      "network": "PPV",
+      "category": "ppv",
+      "programs": [
+        {
+          "title": "WWF WrestleMania XIII",
+          "startTime": "4:30 PM",
+          "duration": 180,
+          "category": "ppv",
+          "price": "$29.99",
+          "flags": ["LIVE", "PPV"]
+        }
+      ]
+    },
+    {
+      "number": 54,
+      "call": "PPV3",
+      "network": "PPV",
+      "category": "ppv",
+      "programs": [
+        {
+          "title": "UFC 12: Judgment Day",
+          "startTime": "4:30 PM",
+          "duration": 180,
+          "category": "ppv",
+          "price": "$24.99",
+          "flags": ["LIVE", "PPV"]
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "call": "PPV4",
+      "network": "PPV",
+      "category": "ppv",
+      "programs": [
+        {
+          "title": "Boxing Championship",
+          "startTime": "4:30 PM",
+          "duration": 180,
+          "category": "ppv",
+          "price": "$44.99",
+          "flags": ["LIVE", "PPV"]
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "call": "TMC",
+      "network": "Movie Channel",
+      "category": "premium",
+      "programs": [
+        {
+          "title": "\"The Firm\" (1993)",
+          "startTime": "4:30 PM",
+          "duration": 150,
+          "category": "movie",
+          "year": 1993,
+          "flags": ["No Commercial Interruption"]
+        }
+      ]
+    },
+    {
+      "number": 61,
+      "call": "SNEAK",
+      "network": "Sneak Prevue",
+      "category": "guide",
+      "programs": [
+        {
+          "title": "Coming Attractions",
+          "startTime": "4:30 PM",
+          "duration": 30,
+          "category": "guide"
+        },
+        {
+          "title": "Movie Previews",
+          "startTime": "5:00 PM",
+          "duration": 30,
+          "category": "guide"
+        },
+        {
+          "title": "New Releases",
+          "startTime": "5:30 PM",
+          "duration": 30,
+          "category": "guide"
+        }
+      ]
+    }
+  ],
+  "promos": [
+    {
+      "title": "Blockbuster Night",
+      "description": "Rent any movie, get one free!",
+      "duration": 15,
+      "type": "local_ad"
+    },
+    {
+      "title": "HBO Free Preview Weekend",
+      "description": "This weekend only - all HBO channels free",
+      "duration": 12,
+      "type": "network_promo"
+    },
+    {
+      "title": "New Channel Launch",
+      "description": "Comedy Central coming to your lineup!",
+      "duration": 10,
+      "type": "service_announcement"
+    }
+  ],
+  "interstitials": [
+    {
+      "type": "weather",
+      "frequency": 300,
+      "duration": 8
+    },
+    {
+      "type": "community",
+      "frequency": 600,
+      "duration": 6
+    },
+    {
+      "type": "lottery",
+      "frequency": 900,
+      "duration": 5
+    }
+  ],
+  "settings": {
+    "scrollSpeed": 45,
+    "timeFormat": "12hour",
+    "timezone": "America/New_York",
+    "crtEffects": true,
+    "backgroundMusic": true
+  }
+}

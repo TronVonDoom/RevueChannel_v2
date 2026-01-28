@@ -1,0 +1,1197 @@
+/* 90s TV Guide Channel Styles */
+
+@font-face {
+    font-family: 'PrevueC';
+    src: url('assets/fonts/PrevueC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PrevueC', 'Arial', sans-serif;
+    background: #000;
+    overflow: hidden;
+    user-select: none;
+}
+
+.tv-container {
+    width: 100vw;
+    height: 100vh;
+    background: #00004d;
+    position: relative;
+    aspect-ratio: 4/3;
+    max-width: 133.33vh; /* Maintain 4:3 ratio */
+    margin: 0 auto;
+    border: 3px solid #444;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Video/Ad Section (Top) */
+.video-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    border-bottom: 2px solid #666;
+}
+
+.video-window {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background: #000;
+    border-right: 2px solid #666;
+}
+
+.video-window video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #001122, #003344, #001122);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-content {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.placeholder-content h3 {
+    font-size: 2em;
+    color: #ffff00;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 0px #000;
+    font-weight: 500;
+}
+
+.placeholder-content p {
+    font-size: 1.1em;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.placeholder-animation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: sweep 3s infinite;
+}
+
+.video-placeholder.animated .placeholder-animation {
+    animation: sweep 2s infinite;
+}
+
+.video-placeholder.animated .placeholder-content h3 {
+    animation: pulse 2s infinite;
+}
+
+@keyframes sweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: opacity 0.3s;
+    z-index: 10;
+    padding-bottom: 10px;
+}
+
+.video-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.click-for-sound {
+    color: #ffff00;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-shadow: 1px 1px 0px #000;
+    animation: pulse 2s infinite;
+    background: rgba(0,0,0,0.8);
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ffff00;
+    cursor: pointer;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.ad-panel {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(45deg, #0033aa 0%, #0066ff 100%);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ad-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.1) 2px,
+        rgba(255,255,255,0.1) 4px
+    );
+    pointer-events: none;
+}
+
+.mega-video-ad {
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    background: linear-gradient(135deg, #000066 0%, #000099 50%, #0000cc 100%);
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.ad-title {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #ffff00;
+    text-shadow: 3px 3px 0px #000, 0 0 10px #ffff00;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.ad-subtitle {
+    font-size: 1.4em;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px #000;
+    letter-spacing: 1px;
+}
+
+.ad-features {
+    font-size: 1.1em;
+    color: #ccffcc;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-shadow: 1px 1px 0px #000;
+}
+
+.ad-special {
+    font-size: 1.5em;
+    color: #ff6600;
+    font-weight: bold;
+    margin-bottom: 12px;
+    animation: blink 1.5s infinite;
+    text-shadow: 2px 2px 0px #000;
+    background: rgba(255,102,0,0.2);
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 2px solid #ff6600;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif; /* Use Arial for cent symbol support */
+    letter-spacing: 1px;
+}
+
+.ad-phone {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-shadow: 1px 1px 0px #000;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.ad-tagline {
+    font-size: 1.1em;
+    color: #ffcccc;
+    font-style: italic;
+    font-weight: 500;
+    text-shadow: 1px 1px 0px #000;
+    margin-top: 5px;
+}
+
+.ad-price {
+    font-size: 1.8em;
+    color: #00ff00;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px #000;
+    margin: 8px 0;
+    animation: glow-green 2s ease-in-out infinite alternate;
+    font-family: Arial, sans-serif; /* Use Arial for cent symbol support */
+}
+
+.ad-disclaimer {
+    font-size: 0.8em;
+    color: #cccccc;
+    margin-top: 8px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; transform: scale(1); }
+    51%, 100% { opacity: 0.7; transform: scale(0.98); }
+}
+
+/* Cent symbol specific styling to fix font rendering issues */
+.cent-symbol {
+    font-family: 'Arial', 'Times New Roman', serif !important;
+    font-weight: bold !important;
+}
+
+@keyframes glow-green {
+    from {
+        text-shadow: 2px 2px 0px #000, 0 0 10px #00ff00;
+        transform: scale(1);
+    }
+    to {
+        text-shadow: 2px 2px 0px #000, 0 0 20px #00ff00, 0 0 30px #66ff66;
+        transform: scale(1.02);
+    }
+}
+
+/* Advertisement Theme Variations */
+.mega-video-ad.blockbuster .ad-title {
+    color: #ffff00;
+    text-shadow: 3px 3px 0px #000080, 0 0 15px #ffff00;
+    font-family: Impact, Arial Black, sans-serif;
+}
+
+.mega-video-ad.blockbuster .ad-special {
+    color: #ffff00;
+    background: rgba(0, 0, 128, 0.9);
+    padding: 6px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 2px solid #ffff00;
+    animation: pulse-yellow 1.5s ease-in-out infinite;
+}
+
+.mega-video-ad.hollywood .ad-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #660000, 0 0 20px #ff0000;
+    animation: neon-red 2s ease-in-out infinite alternate;
+    font-family: Impact, Arial Black, sans-serif;
+}
+
+.mega-video-ad.electronics .ad-title {
+    color: #ffff00;
+    text-shadow: 2px 2px 0px #cc6600, 0 0 15px #ffaa00;
+    font-family: Arial Black, sans-serif;
+}
+
+.mega-video-ad.electronics .ad-special {
+    color: #ffffff;
+    background: rgba(255, 136, 0, 0.9);
+    padding: 6px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(255, 136, 0, 0.8);
+}
+
+.mega-video-ad.mcdonalds .ad-title {
+    color: #ffff00;
+    text-shadow: 3px 3px 0px #cc0000, 0 0 20px #ffff00;
+    font-weight: 900;
+    font-family: Arial Black, sans-serif;
+    letter-spacing: 2px;
+}
+
+.mega-video-ad.mcdonalds .ad-special {
+    color: #ffff00;
+    background: rgba(204, 0, 0, 0.95);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    border: 3px solid #ffff00;
+    animation: bounce-scale 1s ease-in-out infinite;
+}
+
+.mega-video-ad.taco-bell .ad-title {
+    color: #ffff00;
+    text-shadow: 2px 2px 0px #663399, 0 0 15px #ff00ff;
+    transform: skew(-5deg);
+    display: inline-block;
+    font-family: Impact, Arial Black, sans-serif;
+}
+
+.mega-video-ad.walmart .ad-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #004080, 0 0 10px #0066cc;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.mega-video-ad.walmart .ad-special {
+    color: #ffff00;
+    background: rgba(0, 64, 128, 0.95);
+    padding: 6px 15px;
+    border-radius: 25px;
+    display: inline-block;
+    border: 2px solid #ffff00;
+}
+
+.mega-video-ad.att .ad-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #000080, 0 0 15px #ffffff;
+    letter-spacing: 4px;
+    font-family: Times New Roman, serif;
+    font-weight: bold;
+}
+
+.mega-video-ad.aol .ad-title {
+    color: #000080;
+    text-shadow: 1px 1px 0px #ffffff;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 2px solid #000080;
+    font-family: Arial, sans-serif;
+}
+
+.mega-video-ad.toys-r-us .ad-title {
+    color: #ff6600;
+    text-shadow: 2px 2px 0px #ffcc00, 0 0 20px #ff6600;
+    animation: bounce-colors 1.5s ease-in-out infinite;
+    font-family: Comic Sans MS, cursive, Arial;
+    font-weight: bold;
+}
+
+.mega-video-ad.toys-r-us .ad-special {
+    color: #ff6600;
+    background: rgba(255, 204, 0, 0.95);
+    padding: 6px 12px;
+    border-radius: 15px;
+    display: inline-block;
+    border: 3px solid #ff6600;
+    animation: wiggle 0.5s ease-in-out infinite alternate;
+}
+
+.mega-video-ad.music-club .ad-title {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    font-family: Impact, Arial Black, sans-serif;
+    animation: rainbow-pulse 2s ease-in-out infinite;
+}
+
+/* Special animations for specific themes */
+@keyframes neon-red {
+    from {
+        text-shadow: 2px 2px 0px #660000, 0 0 10px #ff0000;
+    }
+    to {
+        text-shadow: 2px 2px 0px #660000, 0 0 30px #ff0000, 0 0 40px #ff6666;
+    }
+}
+
+@keyframes bounce-colors {
+    0%, 100% { 
+        color: #ff6600;
+        transform: scale(1);
+    }
+    50% { 
+        color: #ffcc00;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes bounce-scale {
+    0%, 100% { 
+        transform: scale(1);
+    }
+    50% { 
+        transform: scale(1.05);
+    }
+}
+
+@keyframes pulse-yellow {
+    0%, 100% { 
+        background: rgba(0, 0, 128, 0.9);
+        border-color: #ffff00;
+        box-shadow: 0 0 5px #ffff00;
+    }
+    50% { 
+        background: rgba(0, 0, 128, 1);
+        border-color: #ffffff;
+        box-shadow: 0 0 15px #ffff00;
+    }
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+}
+
+@keyframes rainbow-pulse {
+    0%, 100% { 
+        filter: hue-rotate(0deg) brightness(1);
+    }
+    50% { 
+        filter: hue-rotate(180deg) brightness(1.2);
+    }
+}
+
+/* Enhanced ad panel transitions */
+.ad-panel {
+    transition: all 0.5s ease-in-out;
+}
+
+.ad-panel.transitioning {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+
+/* Guide Section (Bottom) */
+.guide-section {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #00004d;
+}
+
+/* Time Headers */
+.time-headers {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    background: #4962c3;
+    border-bottom: 2px solid #000;
+}
+
+.channel-header {
+    width: 176px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4962c3;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.current-time {
+    color: #ffffff;
+    font-size: 1.9em;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+    padding: 4px 0 0 0;
+    transform: translateY(2px);
+}
+
+.time-slot {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFF00;
+    font-size: 1.9em;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    transition: all 0.3s;
+    background: #4962c3;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+    padding: 4px 0 0 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.time-slot > * {
+    transform: translateY(2px);
+}
+
+.time-slot.current-time-slot {
+    background: #4962c3;
+    color: #ffff00;
+}
+
+/* Grid Container */
+.grid-container {
+    width: 100%;
+    height: calc(100% - 57px);
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-content {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    animation: scroll-grid 45s linear infinite;
+}
+
+@keyframes scroll-grid {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+/* Grid Rows */
+.grid-row {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    border-bottom: 2px solid #000;
+    position: relative;
+    background: #00004d;
+}
+
+/* Logo Row - thicker than regular listings */
+.grid-row.logo-row {
+    height: 350px; /* Increased to accommodate the larger logo (250px + padding) */
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background: #00004d; /* Match the project's dark blue background */
+    border-bottom: 2px solid #000;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #00004d; /* Match the project's dark blue background */
+}
+
+.logo-image {
+    max-height: 250px; /* 150% larger - increased from 100px to 250px */
+    max-width: 95%;
+    object-fit: contain;
+    /* Removed drop shadow */
+}
+
+.grid-row .program-cell:last-child {
+    border-right: 5px solid black;
+}
+
+/* Category-specific row backgrounds */
+.grid-row.premium-row {
+    background: #CC0000 !important; /* Red background for premium movies */
+}
+
+.grid-row.movie-row {
+    background: #CC0000 !important; /* Red background for movies */
+}
+
+.grid-row.sports-row {
+    background: #00004d; /* Keep dark blue for sports */
+}
+
+.grid-row.news-row {
+    background: #00004d; /* Keep dark blue for news */
+}
+
+.grid-row.ppv-row {
+    background: linear-gradient(to right, rgba(255,0,0,0.8), rgba(200,0,0,0.6)) !important;
+    border: 1px solid #ff6600;
+}
+
+.channel-info {
+    width: 176px;
+    min-width: 176px;
+    max-width: 176px;
+    flex: 0 0 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000080;
+    padding: 5px;
+    text-align: center;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.channel-number {
+    color: #ffff00;
+    font-size: 1.9em;
+    font-weight: 500;
+    text-shadow: 1px 1px 0px #000;
+    padding-top: 16px;
+}
+
+.channel-call {
+    color: #FFFF00;
+    font-size: 1.9em;
+    font-weight: 500;
+    margin-top: 0px;
+    text-shadow: 1px 1px 0px #000;
+    padding-bottom: 10px;
+}
+
+.program-cell {
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 8px;
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    background: inherit;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+
+/* Special movie reviews cell styling */
+.program-cell.movie-reviews {
+    background: #CC0000 !important;
+}
+
+.program-cell.movie-reviews .program-title {
+    color: #FFFFFF;
+}
+
+.program-cell.spanning-cell {
+    background: inherit;
+    z-index: 10;
+    border-right: 5px solid black;
+    position: relative;
+}
+
+.time-slot-container {
+    position: relative;
+    height: 100%;
+    border: none;
+}
+
+.program-container {
+    display: flex;
+    flex: 1;
+}
+
+.program-cell.empty-cell {
+    opacity: 0.5;
+    background: inherit;
+}
+
+.program-cell.empty-cell .program-title {
+    color: #666 !important;
+    font-style: italic;
+}
+
+.span-indicator {
+    display: none;
+}
+
+.program-content {
+    width: 100%;
+    color: #ffffff !important; /* Force all program content to be white */
+    line-height: 1.2;
+}
+
+.program-title {
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 0px #000;
+    line-height: 1.1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    color: #ffffff !important; /* Force all program titles to be white */
+}
+
+.program-title.marquee {
+    animation: marquee 10s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.program-details {
+    font-size: 0.8em;
+    color: #cccccc;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.program-year {
+    color: #ffcc00;
+}
+
+.program-flags {
+    display: flex;
+    gap: 4px;
+}
+
+.flag {
+    font-size: 0.7em;
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.flag.stereo {
+    background: #006600;
+    color: white;
+}
+
+.flag.cc {
+    background: #000066;
+    color: white;
+}
+
+.flag.new {
+    background: #ff6600;
+    color: white;
+    animation: blink 1s infinite;
+}
+
+.flag.live {
+    background: #ff0000;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+.ppv-price {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: #ff0000;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.ppv-order {
+    font-size: 0.7em;
+    color: #ffff00;
+    margin-top: 2px;
+}
+
+/* Status Overlay */
+.status-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.status-message {
+    color: #ffff00;
+    font-size: 2em;
+    font-weight: 500;
+    text-shadow: 2px 2px 0px #000;
+    animation: pulse 2s infinite;
+}
+
+/* Interstitial Pages */
+.interstitial-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00004d;
+    z-index: 500;
+}
+
+.weather-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.weather-content h2 {
+    font-size: 3em;
+    color: #ffff00;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.weather-current {
+    margin-bottom: 30px;
+}
+
+.temp {
+    font-size: 4em;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.condition {
+    font-size: 1.5em;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+.weather-forecast {
+    display: flex;
+    gap: 40px;
+}
+
+.forecast-day {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .tv-container {
+        width: 100vw;
+        height: 75vw; /* Maintain 4:3 ratio */
+        max-height: 100vh;
+    }
+    
+    .ad-title {
+        font-size: 1.4em;
+    }
+    
+    .time-slot {
+        font-size: 1em;
+    }
+    
+    .channel-number {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 800px) {
+    .tv-container {
+        height: 100vh;
+        width: 133.33vh; /* Maintain 4:3 ratio */
+        max-width: 100vw;
+    }
+    
+    .channel-info {
+        width: 110px;
+    }
+    
+    .ad-title {
+        font-size: 1.2em;
+    }
+    
+    .program-title {
+        font-size: 0.9em;
+    }
+}
+
+/* CRT Effects */
+.tv-container {
+    animation: crt-flicker 0.15s infinite linear alternate;
+}
+
+/* Scan lines overlay */
+.tv-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 2px,
+        rgba(0,0,0,0.1) 2px,
+        rgba(0,0,0,0.1) 4px
+    );
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* CRT flicker effect - subtle brightness and contrast variations */
+@keyframes crt-flicker {
+    0% { 
+        filter: brightness(1) contrast(1);
+    }
+    2% { 
+        filter: brightness(0.98) contrast(1.02);
+    }
+    4% { 
+        filter: brightness(1.01) contrast(0.99);
+    }
+    6% { 
+        filter: brightness(0.99) contrast(1.01);
+    }
+    8% { 
+        filter: brightness(1.02) contrast(0.98);
+    }
+    10% { 
+        filter: brightness(0.97) contrast(1.03);
+    }
+    12% { 
+        filter: brightness(1) contrast(1);
+    }
+    14% { 
+        filter: brightness(1.01) contrast(0.99);
+    }
+    16% { 
+        filter: brightness(0.99) contrast(1.01);
+    }
+    18% { 
+        filter: brightness(1) contrast(1);
+    }
+    20% { 
+        filter: brightness(0.98) contrast(1.02);
+    }
+    22% { 
+        filter: brightness(1.02) contrast(0.98);
+    }
+    24% { 
+        filter: brightness(0.99) contrast(1.01);
+    }
+    26% { 
+        filter: brightness(1.01) contrast(0.99);
+    }
+    28% { 
+        filter: brightness(1) contrast(1);
+    }
+    30% { 
+        filter: brightness(0.97) contrast(1.03);
+    }
+    32% { 
+        filter: brightness(1.02) contrast(0.98);
+    }
+    34% { 
+        filter: brightness(0.99) contrast(1.01);
+    }
+    36% { 
+        filter: brightness(1) contrast(1);
+    }
+    38% { 
+        filter: brightness(1.01) contrast(0.99);
+    }
+    40% { 
+        filter: brightness(0.98) contrast(1.02);
+    }
+    50% { 
+        filter: brightness(1) contrast(1);
+    }
+    60% { 
+        filter: brightness(0.99) contrast(1.01);
+    }
+    70% { 
+        filter: brightness(1.01) contrast(0.99);
+    }
+    80% { 
+        filter: brightness(0.98) contrast(1.02);
+    }
+    90% { 
+        filter: brightness(1) contrast(1);
+    }
+    100% { 
+        filter: brightness(0.99) contrast(1.01);
+    }
+}
+
+/* Enhanced Program Cell Styling - HIDDEN ELEMENTS */
+/* These styles are preserved but not displayed in the scrolling listings */
+/*
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.program-price {
+    font-size: 12px;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 2px #000;
+    margin-top: 2px;
+}
+
+.program-flags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 2px;
+}
+
+.flag {
+    font-size: 8px;
+    padding: 1px 2px;
+    background: #333;
+    color: #fff;
+    border-radius: 1px;
+    font-weight: bold;
+}
+
+.flag:contains("LIVE") {
+    background: #ff0000;
+    animation: pulse 1s infinite;
+}
+
+.flag:contains("CC") {
+    background: #0066cc;
+}
+
+.flag:contains("Stereo") {
+    background: #006600;
+}
+
+.flag:contains("PPV") {
+    background: #ff6600;
+}
+*/
+
+/* Category-specific Program Styling */
+.movie-program {
+    background: inherit; /* Use row background color */
+}
+
+.movie-program .program-title {
+    color: #ffffff !important; /* Force white text */
+}
+
+.ppv-program {
+    background: inherit; /* Use row background color */
+}
+
+.ppv-program .program-title {
+    color: #ffffff !important; /* Force white text */
+}
+
+.news-program {
+    background: inherit; /* Use row background color */
+}
+
+.news-program .program-title {
+    color: #ffffff !important; /* Force white text */
+}
+
+.sports-program {
+    background: inherit; /* Use row background color */
+}
+
+.sports-program .program-title {
+    color: #ffffff !important; /* Force white text */
+}
+
+/* Special animations */
+@keyframes ppvGlow {
+    0% { 
+        box-shadow: inset 0 0 5px rgba(255, 0, 102, 0.3);
+    }
+    100% { 
+        box-shadow: inset 0 0 10px rgba(255, 0, 102, 0.6);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+}
+
+/* Enhanced Channel Categories - Keep these for reference but don't override main styling */
+/* 
+.grid-row.premium-row {
+    background: linear-gradient(90deg, #001122, #002233, #001122);
+}
+
+.grid-row.sports-row {
+    background: linear-gradient(90deg, #112200, #223300, #112200);
+}
+
+.grid-row.news-row {
+    background: linear-gradient(90deg, #220011, #330022, #220011);
+}
+
+.grid-row.kids-row {
+    background: linear-gradient(90deg, #221100, #332200, #221100);
+}
+*/

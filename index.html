@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Guide Channel - 90s Style</title>
+    <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+<body>
+    <div class="tv-container" id="tvContainer">
+        <!-- Video/Ad Section -->
+        <div class="video-section" id="videoSection">
+            <div class="video-window" id="videoWindow">
+                <video id="promoVideo" muted autoplay playsinline preload="auto" style="display: none;">
+                    <source src="" type="video/mp4">
+                </video>
+                <div class="video-placeholder" id="videoPlaceholder">
+                    <div class="placeholder-content">
+                        <h3>PROMO VIDEO</h3>
+                        <p>Classic 90s TV Promos</p>
+                        <div class="placeholder-animation"></div>
+                    </div>
+                </div>
+                <div class="video-overlay" id="videoOverlay" style="display: none;">
+                    <div class="click-for-sound">Click anywhere for sound</div>
+                </div>
+            </div>
+            <div class="ad-panel" id="adPanel">
+                <div class="mega-video-ad">
+                    <div class="ad-title">MEGA VIDEO EMPORIUM</div>
+                    <div class="ad-subtitle">ALL NEW RELEASES ON VHS</div>
+                    <div class="ad-features">Tapes  Game Cartridges  Rental Robots</div>
+                    <div class="ad-special">REWIND OR PAY $2.99 FEE!</div>
+                    <div class="ad-phone">Store Locator Hotline: 1-888-RENT-VID</div>
+                    <div class="ad-tagline">Your Weekend Entertainment Headquarters</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TV Guide Grid Section -->
+        <div class="guide-section" id="guideSection">
+            <!-- Time Headers -->
+            <div class="time-headers" id="timeHeaders">
+                <div class="channel-header">
+                    <div class="current-time" id="currentTime">00:00:00</div>
+                </div>
+                <div class="time-slot current-time-slot" id="timeSlot1">Loading...</div>
+                <div class="time-slot" id="timeSlot2">Loading...</div>
+                <div class="time-slot" id="timeSlot3">Loading...</div>
+            </div>
+
+            <!-- Grid Container -->
+            <div class="grid-container" id="gridContainer">
+                <div class="grid-content" id="gridContent">
+                    <!-- Grid rows will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Status/Loading Overlay -->
+        <div class="status-overlay" id="statusOverlay" style="display: none;">
+            <div class="status-message">Updating listings...</div>
+        </div>
+
+        <!-- Interstitial Pages -->
+        <div class="interstitial-page" id="weatherPage" style="display: none;">
+            <div class="weather-content">
+                <h2>Local Weather</h2>
+                <div class="weather-current">
+                    <div class="temp">72F</div>
+                    <div class="condition">Partly Cloudy</div>
+                </div>
+                <div class="weather-forecast">
+                    <div class="forecast-day">
+                        <span>Tonight: 65F</span>
+                    </div>
+                    <div class="forecast-day">
+                        <span>Tomorrow: 78F</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="./src/data/comprehensive-data.js"></script>
+    <script src="./src/js/modules/advanced-programming.js"></script>
+    <script type="module" src="./src/js/tv-guide-app.js"></script>
+</body>
+</html>

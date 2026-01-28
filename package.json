@@ -1,0 +1,26 @@
+{
+  "name": "revuechannel",
+  "version": "2.0.0",
+  "description": "90s-style TV Guide Channel with video promos and advertisements",
+  "main": "src/js/tv-guide-app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js"
+  },
+  "keywords": [
+    "tv-guide",
+    "90s",
+    "retro",
+    "television"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {}
+}
