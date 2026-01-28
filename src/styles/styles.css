@@ -1,5 +1,10 @@
 /* 90s TV Guide Channel Styles */
 
+:root {
+    --cell-border-size: 0.50em;
+    --time-header-border-size: 0.21em; /* Adjusted for larger font in time slots */
+}
+
 @font-face {
     font-family: 'PrevueC';
     src: url('assets/fonts/PrevueC.ttf') format('truetype');
@@ -18,18 +23,25 @@ body {
     background: #000;
     overflow: hidden;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .tv-container {
-    width: 100vw;
-    height: 100vh;
     background: #00004d;
     position: relative;
-    aspect-ratio: 4/3;
-    max-width: 133.33vh; /* Maintain 4:3 ratio */
-    margin: 0 auto;
+    width: 133.33vh;  /* 4:3 ratio based on viewport height */
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 75vw;  /* 3:4 ratio based on viewport width */
     border: 3px solid #444;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+    font-size: min(1.3vh, 1vw);  /* Base scalable font size */
 }
 
 /* Video/Ad Section (Top) */
@@ -40,7 +52,7 @@ body {
     width: 100%;
     height: 50%;
     display: flex;
-    border-bottom: 2px solid #666;
+    border-bottom: 0.15em solid #666;
 }
 
 .video-window {
@@ -48,7 +60,7 @@ body {
     height: 100%;
     position: relative;
     background: #000;
-    border-right: 2px solid #666;
+    border-right: 0.15em solid #666;
 }
 
 .video-window video {
@@ -76,21 +88,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 1.15em;
 }
 
 .placeholder-content h3 {
     font-size: 2em;
     color: #ffff00;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 0.4em;
+    text-shadow: 0.15em 0.15em 0 #000;
     font-weight: 500;
 }
 
 .placeholder-content p {
     font-size: 1.1em;
     color: #cccccc;
-    margin-bottom: 15px;
+    margin-bottom: 1.15em;
 }
 
 .placeholder-animation {
@@ -133,7 +145,7 @@ body {
     justify-content: center;
     transition: opacity 0.3s;
     z-index: 10;
-    padding-bottom: 10px;
+    padding-bottom: 0.77em;
 }
 
 .video-overlay.hidden {
@@ -145,12 +157,12 @@ body {
     color: #ffff00;
     font-size: 0.8em;
     font-weight: 500;
-    text-shadow: 1px 1px 0px #000;
+    text-shadow: 0.077em 0.077em 0 #000;
     animation: pulse 2s infinite;
     background: rgba(0,0,0,0.8);
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: 1px solid #ffff00;
+    padding: 0.46em 0.92em;
+    border-radius: 0.31em;
+    border: 0.077em solid #ffff00;
     cursor: pointer;
     text-align: center;
 }
@@ -164,7 +176,7 @@ body {
     width: 50%;
     height: 100%;
     background: linear-gradient(45deg, #0033aa 0%, #0066ff 100%);
-    padding: 20px;
+    padding: 1.54em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,9 +194,9 @@ body {
     background: repeating-linear-gradient(
         45deg,
         transparent,
-        transparent 2px,
-        rgba(255,255,255,0.1) 2px,
-        rgba(255,255,255,0.1) 4px
+        transparent 0.15em,
+        rgba(255,255,255,0.1) 0.15em,
+        rgba(255,255,255,0.1) 0.31em
     );
     pointer-events: none;
 }
@@ -195,20 +207,20 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
-    padding: 15px;
+    padding: 1.15em;
     background: linear-gradient(135deg, #000066 0%, #000099 50%, #0000cc 100%);
-    border-radius: 8px;
-    border: 2px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 0.62em;
+    border: 0.15em solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 1.54em rgba(0,0,0,0.5);
 }
 
 .ad-title {
     font-size: 2.4em;
     font-weight: bold;
     color: #ffff00;
-    text-shadow: 3px 3px 0px #000, 0 0 10px #ffff00;
-    margin-bottom: 10px;
-    letter-spacing: 3px;
+    text-shadow: 0.23em 0.23em 0 #000, 0 0 0.77em #ffff00;
+    margin-bottom: 0.77em;
+    letter-spacing: 0.23em;
     line-height: 1.1;
     text-transform: uppercase;
 }
@@ -217,45 +229,45 @@ body {
     font-size: 1.4em;
     color: #ffffff;
     font-weight: 600;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 0px #000;
-    letter-spacing: 1px;
+    margin-bottom: 0.77em;
+    text-shadow: 0.15em 0.15em 0 #000;
+    letter-spacing: 0.077em;
 }
 
 .ad-features {
     font-size: 1.1em;
     color: #ccffcc;
-    margin-bottom: 10px;
+    margin-bottom: 0.77em;
     font-weight: 500;
-    text-shadow: 1px 1px 0px #000;
+    text-shadow: 0.077em 0.077em 0 #000;
 }
 
 .ad-special {
     font-size: 1.5em;
     color: #ff6600;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 0.92em;
     animation: blink 1.5s infinite;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 0.15em 0.15em 0 #000;
     background: rgba(255,102,0,0.2);
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: 2px solid #ff6600;
+    padding: 0.62em 0.92em;
+    border-radius: 0.38em;
+    border: 0.15em solid #ff6600;
     display: inline-block;
     text-transform: uppercase;
     font-family: Arial, sans-serif; /* Use Arial for cent symbol support */
-    letter-spacing: 1px;
+    letter-spacing: 0.077em;
 }
 
 .ad-phone {
     font-size: 1.2em;
     color: #ffffff;
-    margin-bottom: 8px;
+    margin-bottom: 0.62em;
     font-weight: 600;
-    text-shadow: 1px 1px 0px #000;
+    text-shadow: 0.077em 0.077em 0 #000;
     background: rgba(255,255,255,0.1);
-    padding: 5px 10px;
-    border-radius: 20px;
+    padding: 0.38em 0.77em;
+    border-radius: 1.54em;
     display: inline-block;
 }
 
@@ -264,16 +276,16 @@ body {
     color: #ffcccc;
     font-style: italic;
     font-weight: 500;
-    text-shadow: 1px 1px 0px #000;
-    margin-top: 5px;
+    text-shadow: 0.077em 0.077em 0 #000;
+    margin-top: 0.38em;
 }
 
 .ad-price {
     font-size: 1.8em;
     color: #00ff00;
     font-weight: bold;
-    text-shadow: 2px 2px 0px #000;
-    margin: 8px 0;
+    text-shadow: 0.15em 0.15em 0 #000;
+    margin: 0.62em 0;
     animation: glow-green 2s ease-in-out infinite alternate;
     font-family: Arial, sans-serif; /* Use Arial for cent symbol support */
 }
@@ -281,7 +293,7 @@ body {
 .ad-disclaimer {
     font-size: 0.8em;
     color: #cccccc;
-    margin-top: 8px;
+    margin-top: 0.62em;
     font-style: italic;
     opacity: 0.8;
 }
@@ -299,11 +311,11 @@ body {
 
 @keyframes glow-green {
     from {
-        text-shadow: 2px 2px 0px #000, 0 0 10px #00ff00;
+        text-shadow: 0.15em 0.15em 0 #000, 0 0 0.77em #00ff00;
         transform: scale(1);
     }
     to {
-        text-shadow: 2px 2px 0px #000, 0 0 20px #00ff00, 0 0 30px #66ff66;
+        text-shadow: 0.15em 0.15em 0 #000, 0 0 1.54em #00ff00, 0 0 2.31em #66ff66;
         transform: scale(1.02);
     }
 }
@@ -311,64 +323,64 @@ body {
 /* Advertisement Theme Variations */
 .mega-video-ad.blockbuster .ad-title {
     color: #ffff00;
-    text-shadow: 3px 3px 0px #000080, 0 0 15px #ffff00;
+    text-shadow: 0.23em 0.23em 0 #000080, 0 0 1.15em #ffff00;
     font-family: Impact, Arial Black, sans-serif;
 }
 
 .mega-video-ad.blockbuster .ad-special {
     color: #ffff00;
     background: rgba(0, 0, 128, 0.9);
-    padding: 6px 12px;
-    border-radius: 3px;
+    padding: 0.46em 0.92em;
+    border-radius: 0.23em;
     display: inline-block;
-    border: 2px solid #ffff00;
+    border: 0.15em solid #ffff00;
     animation: pulse-yellow 1.5s ease-in-out infinite;
 }
 
 .mega-video-ad.hollywood .ad-title {
     color: #ffffff;
-    text-shadow: 2px 2px 0px #660000, 0 0 20px #ff0000;
+    text-shadow: 0.15em 0.15em 0 #660000, 0 0 1.54em #ff0000;
     animation: neon-red 2s ease-in-out infinite alternate;
     font-family: Impact, Arial Black, sans-serif;
 }
 
 .mega-video-ad.electronics .ad-title {
     color: #ffff00;
-    text-shadow: 2px 2px 0px #cc6600, 0 0 15px #ffaa00;
+    text-shadow: 0.15em 0.15em 0 #cc6600, 0 0 1.15em #ffaa00;
     font-family: Arial Black, sans-serif;
 }
 
 .mega-video-ad.electronics .ad-special {
     color: #ffffff;
     background: rgba(255, 136, 0, 0.9);
-    padding: 6px 12px;
-    border-radius: 3px;
+    padding: 0.46em 0.92em;
+    border-radius: 0.23em;
     display: inline-block;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px rgba(255, 136, 0, 0.8);
+    border: 0.15em solid #ffffff;
+    box-shadow: 0 0 0.77em rgba(255, 136, 0, 0.8);
 }
 
 .mega-video-ad.mcdonalds .ad-title {
     color: #ffff00;
-    text-shadow: 3px 3px 0px #cc0000, 0 0 20px #ffff00;
+    text-shadow: 0.23em 0.23em 0 #cc0000, 0 0 1.54em #ffff00;
     font-weight: 900;
     font-family: Arial Black, sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 0.15em;
 }
 
 .mega-video-ad.mcdonalds .ad-special {
     color: #ffff00;
     background: rgba(204, 0, 0, 0.95);
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 0.62em 1.23em;
+    border-radius: 1.54em;
     display: inline-block;
-    border: 3px solid #ffff00;
+    border: 0.23em solid #ffff00;
     animation: bounce-scale 1s ease-in-out infinite;
 }
 
 .mega-video-ad.taco-bell .ad-title {
     color: #ffff00;
-    text-shadow: 2px 2px 0px #663399, 0 0 15px #ff00ff;
+    text-shadow: 0.15em 0.15em 0 #663399, 0 0 1.15em #ff00ff;
     transform: skew(-5deg);
     display: inline-block;
     font-family: Impact, Arial Black, sans-serif;
@@ -376,7 +388,7 @@ body {
 
 .mega-video-ad.walmart .ad-title {
     color: #ffffff;
-    text-shadow: 2px 2px 0px #004080, 0 0 10px #0066cc;
+    text-shadow: 0.15em 0.15em 0 #004080, 0 0 0.77em #0066cc;
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
@@ -384,34 +396,34 @@ body {
 .mega-video-ad.walmart .ad-special {
     color: #ffff00;
     background: rgba(0, 64, 128, 0.95);
-    padding: 6px 15px;
-    border-radius: 25px;
+    padding: 0.46em 1.15em;
+    border-radius: 1.92em;
     display: inline-block;
-    border: 2px solid #ffff00;
+    border: 0.15em solid #ffff00;
 }
 
 .mega-video-ad.att .ad-title {
     color: #ffffff;
-    text-shadow: 2px 2px 0px #000080, 0 0 15px #ffffff;
-    letter-spacing: 4px;
+    text-shadow: 0.15em 0.15em 0 #000080, 0 0 1.15em #ffffff;
+    letter-spacing: 0.31em;
     font-family: Times New Roman, serif;
     font-weight: bold;
 }
 
 .mega-video-ad.aol .ad-title {
     color: #000080;
-    text-shadow: 1px 1px 0px #ffffff;
+    text-shadow: 0.077em 0.077em 0 #ffffff;
     background: rgba(255, 255, 255, 0.95);
-    padding: 8px 15px;
-    border-radius: 8px;
+    padding: 0.62em 1.15em;
+    border-radius: 0.62em;
     display: inline-block;
-    border: 2px solid #000080;
+    border: 0.15em solid #000080;
     font-family: Arial, sans-serif;
 }
 
 .mega-video-ad.toys-r-us .ad-title {
     color: #ff6600;
-    text-shadow: 2px 2px 0px #ffcc00, 0 0 20px #ff6600;
+    text-shadow: 0.15em 0.15em 0 #ffcc00, 0 0 1.54em #ff6600;
     animation: bounce-colors 1.5s ease-in-out infinite;
     font-family: Comic Sans MS, cursive, Arial;
     font-weight: bold;
@@ -420,10 +432,10 @@ body {
 .mega-video-ad.toys-r-us .ad-special {
     color: #ff6600;
     background: rgba(255, 204, 0, 0.95);
-    padding: 6px 12px;
-    border-radius: 15px;
+    padding: 0.46em 0.92em;
+    border-radius: 1.15em;
     display: inline-block;
-    border: 3px solid #ff6600;
+    border: 0.23em solid #ff6600;
     animation: wiggle 0.5s ease-in-out infinite alternate;
 }
 
@@ -440,10 +452,10 @@ body {
 /* Special animations for specific themes */
 @keyframes neon-red {
     from {
-        text-shadow: 2px 2px 0px #660000, 0 0 10px #ff0000;
+        text-shadow: 0.15em 0.15em 0 #660000, 0 0 0.77em #ff0000;
     }
     to {
-        text-shadow: 2px 2px 0px #660000, 0 0 30px #ff0000, 0 0 40px #ff6666;
+        text-shadow: 0.15em 0.15em 0 #660000, 0 0 2.31em #ff0000, 0 0 3.08em #ff6666;
     }
 }
 
@@ -471,12 +483,12 @@ body {
     0%, 100% { 
         background: rgba(0, 0, 128, 0.9);
         border-color: #ffff00;
-        box-shadow: 0 0 5px #ffff00;
+        box-shadow: 0 0 0.38em #ffff00;
     }
     50% { 
         background: rgba(0, 0, 128, 1);
         border-color: #ffffff;
-        box-shadow: 0 0 15px #ffff00;
+        box-shadow: 0 0 1.15em #ffff00;
     }
 }
 
@@ -517,65 +529,56 @@ body {
 /* Time Headers */
 .time-headers {
     width: 100%;
-    height: 52px;
+    height: 5.2em;
     display: flex;
     background: #4962c3;
-    border-bottom: 2px solid #000;
+    border-bottom: 0.15em solid #000;
 }
 
 .channel-header {
-    width: 176px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #4962c3;
-    border-top: 5px solid white;
-    border-left: 5px solid white;
-    border-bottom: 5px solid black;
-    border-right: 5px solid black;
+    width: 13.54em;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #4962c3 !important;
+    border-top: var(--cell-border-size) solid white;
+    border-left: var(--cell-border-size) solid white;
+    border-bottom: var(--cell-border-size) solid black;
+    border-right: var(--cell-border-size) solid black;
+    box-sizing: border-box !important;
+}
+
+.channel-header .current-time {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    position: relative;
+    line-height: 1;
 }
 
 .current-time {
     color: #ffffff;
-    font-size: 1.9em;
+    font-size: 2.52em;
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    line-height: 1;
-    text-align: center;
-    margin: 0;
-    padding: 4px 0 0 0;
-    transform: translateY(2px);
+    text-shadow: 0.15em 0.15em 0.31em rgba(0,0,0,0.8);
 }
 
 .time-slot {
     flex: 1;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFFF00;
-    font-size: 1.9em;
+    font-size: 2.52em;
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 0.15em 0.15em 0.31em rgba(0,0,0,0.8);
     transition: all 0.3s;
     background: #4962c3;
-    border-top: 5px solid white;
-    border-left: 5px solid white;
-    border-bottom: 5px solid black;
-    border-right: 5px solid black;
-    line-height: 1;
-    text-align: center;
-    margin: 0;
-    padding: 4px 0 0 0;
+    border-top: 0.20em solid white;
+    border-left: 0.20em solid white;
+    border-bottom: 0.20em solid black;
+    border-right: 0.20em solid black;
     box-sizing: border-box;
-    position: relative;
-}
-
-.time-slot > * {
-    transform: translateY(2px);
 }
 
 .time-slot.current-time-slot {
@@ -586,7 +589,7 @@ body {
 /* Grid Container */
 .grid-container {
     width: 100%;
-    height: calc(100% - 57px);
+    height: calc(100% - 4.38em);
     overflow: hidden;
     position: relative;
 }
@@ -606,20 +609,20 @@ body {
 /* Grid Rows */
 .grid-row {
     width: 100%;
-    height: 75px;
+    height: 7.5em;
     display: flex;
-    border-bottom: 2px solid #000;
+    border-bottom: 0.15em solid #000;
     position: relative;
     background: #00004d;
 }
 
 /* Logo Row - thicker than regular listings */
 .grid-row.logo-row {
-    height: 350px; /* Increased to accommodate the larger logo (250px + padding) */
-    padding-top: 35px;
-    padding-bottom: 35px;
+    height: 26.92em; /* Increased to accommodate the larger logo (250px + padding) */
+    padding-top: 2.69em;
+    padding-bottom: 2.69em;
     background: #00004d; /* Match the project's dark blue background */
-    border-bottom: 2px solid #000;
+    border-bottom: 0.15em solid #000;
 }
 
 .logo-container {
@@ -627,19 +630,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 1.15em;
     background: #00004d; /* Match the project's dark blue background */
 }
 
 .logo-image {
-    max-height: 250px; /* 150% larger - increased from 100px to 250px */
+    max-height: 19.23em; /* 150% larger - increased from 100px to 250px */
     max-width: 95%;
     object-fit: contain;
     /* Removed drop shadow */
 }
 
 .grid-row .program-cell:last-child {
-    border-right: 5px solid black;
+    border-right: var(--cell-border-size) solid black;
 }
 
 /* Category-specific row backgrounds */
@@ -661,56 +664,57 @@ body {
 
 .grid-row.ppv-row {
     background: linear-gradient(to right, rgba(255,0,0,0.8), rgba(200,0,0,0.6)) !important;
-    border: 1px solid #ff6600;
+    border: 0.077em solid #ff6600;
 }
 
 .channel-info {
-    width: 176px;
-    min-width: 176px;
-    max-width: 176px;
-    flex: 0 0 176px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #000080;
-    padding: 5px;
-    text-align: center;
-    border-top: 5px solid white;
-    border-left: 5px solid white;
-    border-bottom: 5px solid black;
-    border-right: 5px solid black;
+    width: 13.54em;
+    min-width: 13.54em;
+    max-width: 13.54em;
+    height: 100% !important;
+    flex: 0 0 13.54em;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #000080 !important;
+    border-top: var(--cell-border-size) solid white;
+    border-left: var(--cell-border-size) solid white;
+    border-bottom: var(--cell-border-size) solid black;
+    border-right: var(--cell-border-size) solid black;
+    box-sizing: border-box !important;
 }
 
 .channel-number {
     color: #ffff00;
-    font-size: 1.9em;
+    font-size: 2.52em;
     font-weight: 500;
-    text-shadow: 1px 1px 0px #000;
-    padding-top: 16px;
+    text-shadow: 0.077em 0.077em 0 #000;
+    line-height: 1;
+    margin-bottom: 0.1em;
 }
 
 .channel-call {
     color: #FFFF00;
-    font-size: 1.9em;
+    font-size: 2.52em;
     font-weight: 500;
-    margin-top: 0px;
-    text-shadow: 1px 1px 0px #000;
-    padding-bottom: 10px;
+    text-shadow: 0.077em 0.077em 0 #000;
+    line-height: 1;
 }
 
 .program-cell {
     display: flex;
     align-items: flex-start;
-    padding: 4px 8px;
+    padding: 0.31em 0.62em;
     position: relative;
     overflow: hidden;
     min-width: 0;
     background: inherit;
-    border-top: 5px solid white;
-    border-left: 5px solid white;
-    border-bottom: 5px solid black;
-    border-right: 5px solid black;
+    border-top: var(--cell-border-size) solid white;
+    border-left: var(--cell-border-size) solid white;
+    border-bottom: var(--cell-border-size) solid black;
+    border-right: var(--cell-border-size) solid black;
+    box-sizing: border-box;
 }
 
 /* Special movie reviews cell styling */
@@ -725,7 +729,7 @@ body {
 .program-cell.spanning-cell {
     background: inherit;
     z-index: 10;
-    border-right: 5px solid black;
+    border-right: var(--cell-border-size) solid black;
     position: relative;
 }
 
@@ -761,7 +765,7 @@ body {
 }
 
 .program-title {
-    font-size: 1.7em;
+    font-size: 2.205em;
     font-weight: 500;
     margin-bottom: 0px;
     text-shadow: 1px 1px 0px #000;
@@ -786,10 +790,10 @@ body {
 }
 
 .program-details {
-    font-size: 0.8em;
+    font-size: 1.05em;
     color: #cccccc;
     display: flex;
-    gap: 8px;
+    gap: 0.62em;
     flex-wrap: wrap;
 }
 
@@ -799,13 +803,13 @@ body {
 
 .program-flags {
     display: flex;
-    gap: 4px;
+    gap: 0.31em;
 }
 
 .flag {
-    font-size: 0.7em;
-    padding: 1px 3px;
-    border-radius: 2px;
+    font-size: 0.92em;
+    padding: 0.077em 0.23em;
+    border-radius: 0.15em;
     font-weight: 500;
 }
 
@@ -833,20 +837,20 @@ body {
 
 .ppv-price {
     position: absolute;
-    top: 5px;
-    right: 8px;
+    top: 0.38em;
+    right: 0.62em;
     background: #ff0000;
     color: white;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-size: 0.8em;
+    padding: 0.15em 0.46em;
+    border-radius: 0.23em;
+    font-size: 1.05em;
     font-weight: 500;
 }
 
 .ppv-order {
     font-size: 0.7em;
     color: #ffff00;
-    margin-top: 2px;
+    margin-top: 0.15em;
 }
 
 /* Status Overlay */
@@ -895,76 +899,35 @@ body {
 .weather-content h2 {
     font-size: 3em;
     color: #ffff00;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 3.08em;
+    text-shadow: 0.15em 0.15em 0 #000;
 }
 
 .weather-current {
-    margin-bottom: 30px;
+    margin-bottom: 2.31em;
 }
 
 .temp {
     font-size: 4em;
     font-weight: 500;
     color: #ffffff;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 0.15em 0.15em 0 #000;
 }
 
 .condition {
     font-size: 1.5em;
     color: #cccccc;
-    margin-top: 10px;
+    margin-top: 0.77em;
 }
 
 .weather-forecast {
     display: flex;
-    gap: 40px;
+    gap: 3.08em;
 }
 
 .forecast-day {
     font-size: 1.2em;
     color: #ffffff;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1200px) {
-    .tv-container {
-        width: 100vw;
-        height: 75vw; /* Maintain 4:3 ratio */
-        max-height: 100vh;
-    }
-    
-    .ad-title {
-        font-size: 1.4em;
-    }
-    
-    .time-slot {
-        font-size: 1em;
-    }
-    
-    .channel-number {
-        font-size: 1.2em;
-    }
-}
-
-@media (max-width: 800px) {
-    .tv-container {
-        height: 100vh;
-        width: 133.33vh; /* Maintain 4:3 ratio */
-        max-width: 100vw;
-    }
-    
-    .channel-info {
-        width: 110px;
-    }
-    
-    .ad-title {
-        font-size: 1.2em;
-    }
-    
-    .program-title {
-        font-size: 0.9em;
-    }
 }
 
 /* CRT Effects */
@@ -982,10 +945,10 @@ body {
     height: 100%;
     background: repeating-linear-gradient(
         0deg,
-        transparent 0px,
-        transparent 2px,
-        rgba(0,0,0,0.1) 2px,
-        rgba(0,0,0,0.1) 4px
+        transparent 0,
+        transparent 0.15em,
+        rgba(0,0,0,0.1) 0.15em,
+        rgba(0,0,0,0.1) 0.31em
     );
     pointer-events: none;
     z-index: 1000;
@@ -1161,10 +1124,10 @@ body {
 /* Special animations */
 @keyframes ppvGlow {
     0% { 
-        box-shadow: inset 0 0 5px rgba(255, 0, 102, 0.3);
+        box-shadow: inset 0 0 0.38em rgba(255, 0, 102, 0.3);
     }
     100% { 
-        box-shadow: inset 0 0 10px rgba(255, 0, 102, 0.6);
+        box-shadow: inset 0 0 0.77em rgba(255, 0, 102, 0.6);
     }
 }
 
